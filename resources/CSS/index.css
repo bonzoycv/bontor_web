@@ -1,9 +1,22 @@
-.banner{
-    background-color: #4d00ff;
-    color: white;
-    margin-top: 75px;
+body {
+    background-color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: grey;
+    text-align: center;
+}
+
+div.banner{
+    background-color: #524d5e;
+    color: rgb(241, 234, 234);
+    top: 0;
+    left: 0;
+    width: 100%;
     text-align: center;
     padding: 100px 0;
+    position: fixed;
+    z-index: 999px;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
+    
 }
 
 #small-bontor{
@@ -18,4 +31,8 @@
 
 .bold{
     font-weight: 900;
+}
+
+#historia {
+    margin-top: 600px;
 }
