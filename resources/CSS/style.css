@@ -5,34 +5,40 @@ body {
     text-align: center;
 }
 
-div.banner{
-    background-color: #524d5e;
+/* section.logo {
+    float: left;
+    
+} */
+
+#small-bontor{
+    height: 650px;
+    width: 400px;
+}
+
+.banner{
+    background-color: #524d5e00;
     color: rgb(241, 234, 234);
     top: 0;
     left: 0;
     width: 100%;
     text-align: center;
-    padding: 100px 0;
-    position: fixed;
+    padding: 0 0;
+    position: relative;
     z-index: 999px;
     box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
     
 }
 
-#small-bontor{
-    height: 300px;
-    width: 300px;
-}
 
-#bontor{
-    color: #4d00ff;
-    font-size: 100px;
+
+h3 {
+    margin-top: auto;
 }
 
 .bold{
     font-weight: 900;
 }
 
-#historia {
-    margin-top: 600px;
+div#historia {
+    margin-top: 0;
 }
