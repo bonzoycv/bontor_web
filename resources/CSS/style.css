@@ -120,3 +120,15 @@ h2, h3 {
   p {
     text-align: center;
   }
+
+
+  /* Menu para telefonos celulares */
+
+  @media (max-width: 768px) {
+    nav {
+      display: none; /* Ocultar el menú en pantallas pequeñas */
+      display: block; /* Mostrar el botón de hamburguesa */
+
+    }
+  
+}
