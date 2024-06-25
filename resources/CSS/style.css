@@ -34,7 +34,40 @@ nav{
     background-color: #333;
     color: #fff;
     padding: 10px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   
+}
+
+
+/* nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+.menu-toggle {
+    display: none;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    nav .menu {
+        display: none; /* Initially hide the menu on smaller screens */
+    }
+
+    .menu-toggle {
+        display: block; /* Show the toggle button on smaller screens */
+    }
+}
+
+nav ul.open {
+    display: block;
 }
 
 
@@ -103,7 +136,7 @@ h2, h3 {
 }
 
 
-#historia p {
+#historia p, p {
     font-size: 16px;
     margin-bottom: 20px;
   }
@@ -129,7 +162,7 @@ h2, h3 {
 
   /* Menu para telefonos celulares */
 /* Media query para pantallas pequeñas */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
     }
@@ -137,6 +170,7 @@ h2, h3 {
     nav ul li {
         margin-right: 0;
         margin-bottom: 10px;
+        min-width: ;
     }
 
     nav ul li ul {
@@ -150,7 +184,51 @@ h2, h3 {
     h1 {
         font-size: 1.5em;
     }
+} */
+
+
+
+/* Media query para pantallas pequeñas (máximo 768px) */
+@media (max-width: 768px) {
+    /* Aumentar el ancho del menú */
+    nav ul {
+        flex-direction: column;  /* Menú vertical */
+    }
+
+    nav li {
+        margin-right: 0;  /* Quitar margen derecho */
+        margin-bottom: 10px;  /* Añadir margen inferior */
+    }
+
+    nav li ul {
+        position: static;  /* Posicionamiento normal */
+        width: 100%;  /* Ancho completo */
+        /* margin-top: 0;  Quitar margen superior */
+        margin: 10px 0; /*agregar margen para separar*/
+        padding: 10px;  /* Añadir padding */
+        background-color: #fff;  /* Fondo blanco */
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);  /* Sombra */
+        border-radius: 5px;  /* Borde redondeado */
+        z-index: 1;  /* Encima del contenido principal */
+        overflow: hidden; 
+    }
+
+    nav li ul li {
+        padding: 10px;  /* Añadir padding */
+    }
+
+    /* Aumentar el tamaño de la fuente en elementos de texto */
+    p, h2, h3 {
+        font-size: 18px;  /* Tamaño de fuente más grande */
+    }
+
+    /* Ajustar la imagen del logo */
+    #small-bontor {
+        width: 80%;  /* Reducir el ancho de la imagen */
+        margin: 20px auto;  /* Centrar la imagen */
+    }
 }
+
 
 
 /* container para crear 2 columnas en donde se mostrara el texto como un libro */
