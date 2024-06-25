@@ -1,3 +1,5 @@
+
+
 body {
     background-color: #f5f5f5; /* Gris claro de fondo */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -20,7 +22,7 @@ body {
 }
 
 h1 {
-    float: center;
+    text-align: center;
     padding-bottom: 0;
     margin-top: 8px;
 }
@@ -32,7 +34,7 @@ nav{
     background-color: #333;
     color: #fff;
     padding: 10px 0;
-    
+  
 }
 
 
@@ -52,29 +54,32 @@ nav li a {
 display: inline-block;
 padding: 10px 15px;
 text-decoration: none;
-color: rgb(148, 146, 146);
+color: rgb(138, 138, 138);
+
 }
 
 nav li ul {
 position: absolute;
 display: none;
-background-color: rgba(224, 224, 224, 0.849);
+background-color: rgb(231, 231, 231); /*color de fondo del menu desplegable*/
 min-width: 10px;
-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+box-shadow: 0px 8px 16px 0px rgb(78, 78, 78); /*sombreado de la caja del menu desplegable*/
+border-radius: 10%; /* suavisa los bordes de las cajas del menu*/
 }
 
+/*menu desplegable*/
 nav li ul li {
 float: none;
 padding: 10px;
 }
 
 nav li ul li a {
-color: #000;
-text-decoration: none;
+color: #000;   /*color de texto dentro de cajas del menu*/
+
 }
 
 a {
-    color: #dae2eb; /* Azul para enlaces */
+    color: #646464; /* color para enlaces */
     text-decoration: none;
 }
 
@@ -84,7 +89,7 @@ display: block;
 
 
 h2, h3 {
-    margin-top: auto;
+    margin-top: 0;
     color: #212121; /* Títulos más oscuros */
 }
 
@@ -112,23 +117,71 @@ h2, h3 {
     list-style: disc;
   }
 
-#historia {
+/* #historia {
     text-align: center;
     margin: 0 auto;
   }
 
   p {
     text-align: center;
-  }
+  } */
 
 
   /* Menu para telefonos celulares */
-
-  @media (max-width: 768px) {
-    nav {
-      display: none; /* Ocultar el menú en pantallas pequeñas */
-      display: block; /* Mostrar el botón de hamburguesa */
-
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
     }
-  
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    nav ul li ul {
+        position: static;
+    }
+
+    p {
+        margin: 1em;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
 }
+
+
+/* container para crear 2 columnas en donde se mostrara el texto como un libro */
+.container {
+    display: grid;
+    max-width: 900px;
+    position: relative;
+    margin: auto;
+    gap: 10px;
+    grid-template-areas:  "left right"
+                          "center center"
+                          "footer footer";                                               
+    grid-template-columns: 500px 500px;
+  }
+
+  .center{
+    grid-area: center;
+    
+  }
+
+  .left {
+    
+    grid-area: left;
+  }
+  
+  .right {
+   
+    grid-area: right;
+  }
+
+  .footer{
+    grid-area: footer;
+    text-align: right;
+  }
